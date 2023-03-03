@@ -1,5 +1,6 @@
 from pathlib import Path
 from environs import Env # (new)
+import os # (new)
 
 # Environment Variables config (new)
 env = Env()
@@ -114,6 +115,10 @@ LANGUAGES = (            # (new)
 USE_I18N = True
 
 USE_TZ = True
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, "locale"),
+)
 
 
 # Static files (CSS, JavaScript, Images)
